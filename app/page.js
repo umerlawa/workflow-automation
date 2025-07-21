@@ -6,6 +6,12 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import { Badge } from "@/components/ui/badge"
 import { Check, MessageSquare, Clock, TrendingUp } from "lucide-react"
 import Image from 'next/image'
+import Link from 'next/link'
+
+// Replace button with:
+<Link href="/login" className="px-6 py-3 bg-blue-600 text-white rounded-lg">
+  Get Started
+</Link>
 
 export default function LandingPage() {
   const [email, setEmail] = useState('')
@@ -83,12 +89,13 @@ export default function LandingPage() {
                   className="flex-1 h-12 px-4 text-base border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent" 
                   required
                 />
-                <button
-                  type="submit"
-                  className="h-12 px-8 bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-700 hover:to-indigo-700 text-white font-medium rounded-lg transition-all duration-200"
+                <Link
+                  href="/login"
+                  className="px-6 py-3 bg-blue-600 text-white rounded-lg inline-block text-center"
                 >
-                  {submitted ? '✓ Thanks!' : 'Get Early Access'}
-                </button>
+                  Get Started
+                </Link>
+
               </div>
               <p className="mt-3 text-sm text-gray-500">Join 50+ businesses already automating</p>
             </form>

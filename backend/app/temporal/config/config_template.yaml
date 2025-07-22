@@ -1,0 +1,16 @@
+log:
+  stdout: true
+  level: info
+
+persistence:
+  defaultStore: default
+  datastores:
+    default:
+      driver: "redis"
+      redis:
+        hosts:
+          - redis:6379
+
+global:
+  membership:
+    maxJoinDuration: 30s
